@@ -45,23 +45,23 @@ if(isset($_POST['submit'])){
  	<ul> 		
  	    <li><a href="index.html">Home</a></li>
  		<li><a href="contact.html" class="active">Contact</a></li>
- 		<li><a href="about.html">About</a></li> 		
+ 		<li><a href="payment.html">Payment</a></li> 		
  	</ul>
 </nav>
 
 
- <main id="contactHeading">
+ <main>
+ <hr>
  <h2 >Contact The Unmedicated</h2>
- <p>Required information is marked with an asterisk (*).</p>
- 
+<div id="contactForm">
 <form action="" method="post">
-First Name: <input type="text" name="first_name"><br>
-Last Name: <input type="text" name="last_name"><br>
-Email: <input type="text" name="email"><br>
+First Name: <br><input type="text" name="first_name"><br>
+Last Name: <br><input type="text" name="last_name"><br>
+Email: <br><input type="text" name="email"><br>
 Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
 <input type="submit" name="submit" value="Submit">
 </form>				
-						
+</div>			
  </main>
  
  <footer>

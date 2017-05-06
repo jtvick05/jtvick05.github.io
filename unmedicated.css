@@ -43,22 +43,21 @@ nav ul { list-style-type: none;
  display: table;}
  
 nav ul li {display: table-cell;
-			text-align: center;}
+			text-align: center;
+			width: 30%;}
 
 #logo { border:3px solid #000000;
 		background-color: #FFFFFF;
 		border-radius: 15px;
 		display: inline-block;}
 			
-.active {color: #000000;
+.active {
          border: 1px solid black;
-         border-radius: 15px;
-         background-color: #FFFFFF;}
+         border-radius: 15px; }
 
 footer {font-style: italic;
         font-size: 80%;
         clear: both;
-        margin-left: 30px;
         color: #000000;
         text-align: center;}
 
@@ -97,7 +96,10 @@ td a {text-decoration: none;
 		color:#00FFFF; }
 
 form { color: #000000;
-       text-align: center; }
+       text-align: center;
+        }
+
+#contactForm { padding-bottom: 1em; }
 
 header, nav, main, footer { display: block; }
 
@@ -195,14 +197,14 @@ header, nav, main, footer { display: block; }
 	body{ background-image: none;}
 	header {padding: 0em;}
 	h1 { font-size: 2.4em; }
-	nav{ width: 100%;
-	     padding: 0;
-	    }
-	nav a {font-size: 1.25em;
-		   min-width: 4em;
-		   display: block; }
+
+	nav a { font-size: 1.25em;
+	        display: block; }
 	nav ul li {display:block;
-				margin: .1em;}
+				margin: .1em;
+				width: 70%;
+				margin-left: 15%;
+				margin-right: 15%;}
 	.active {color: #FFFFFF;
          border: 1px solid black;
          border-radius: 15px;
