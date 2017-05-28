@@ -12,45 +12,52 @@
 </script>
 <![endif]-->
 
- 
+<script>
+function validateForm() {
+    var contactName = document.forms["contactForm"]["contactName"].value;
+    var email = document.forms["contactForm"]["email"].value;
+    var comment = document.forms["contactForm"]["comment"].value;
+    if (contactName == "" || email == "" || comment == "") {
+        alert("All form fields must be filled out");
+        return false;
+    }
+}
+</script>
+
 </head>
 
 <body>
 
-
-<div id="wrapper">
-<header><div id="logo"><h1><a href="index.html">The Unmedicated</a></h1></div>
- </header>
+   <div id="wrapper">
+   <header><div id="logo"><h1><a href="index.html">The Unmedicated</a></h1></div>
+   </header>
  
- <nav>
- 	<ul> 		
+   <nav>
+      <ul> 		
  	    <li><a href="index.html">Home</a></li>
  		<li><a href="contact.html" class="active">Contact</a></li>
  		<li><a href="payment.html">Payment</a></li> 		
- 	</ul>
-</nav>
+ 	  </ul>
+   </nav>
 
-
- <main>
- <hr>
- <h2 >Contact The Unmedicated</h2>
-<div id="contactForm">
-<form method="post" action="https://formspree.io/jtvick05@gmail.com">  
-  Name: <input type="text" name="name">
- 
-  <br><br>
-  E-mail: <input type="text" name="email">
+   <main>
+   <hr>
+   <h2 >Contact The Unmedicated</h2>
+   <div id="contactForm">
+   <form name="contactForm" onsubmit="return validateForm();" method="post" action="https://formspree.io/jtvick05@gmail.com">  
+      Name: <input type="text" name="contactName" required>
+      <br><br>
+      E-mail: <input type="text" name="email" required>
   
-  <br><br>
-  Comment: <textarea name="comment" rows="5" cols="40"></textarea>
-  <br><br>
-  <input type="submit" name="submit" value="Submit">  
-  <br>
-  After Submit, you will be redirected to Formspree to complete your submission.
-</form>
-		
-</div>			
- </main>
+     <br><br>
+     Comment: <textarea name="comment" rows="5" cols="40" required></textarea>
+     <br><br>
+     <input type="submit" name="submit" value="Submit">  
+     <br>
+     After Submit, you will be redirected to Formspree to complete your submission.
+   </form>
+   </div>			
+   </main>
  
  <footer>
  <a href="payment.html"><img class="bitcoinLogo" src="Images/bitcoin.png"></a>
