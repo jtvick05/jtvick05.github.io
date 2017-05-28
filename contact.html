@@ -13,14 +13,17 @@
 <![endif]-->
 
 <script>
-function validateForm() {
-    var contactName = document.forms["contactForm"]["contactName"].value;
-    var email = document.forms["contactForm"]["email"].value;
-    var comment = document.forms["contactForm"]["comment"].value;
-    if (contactName == "" || email == "" || comment == "") {
-        alert("All form fields must be filled out");
-        return false;
-    }
+function validateEmail(email){
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+        if (reg.test(email.value) == false) 
+        {
+            alert('Invalid Email Address');
+            return false;
+        }
+
+        return true;
+
 }
 </script>
 
@@ -44,11 +47,10 @@ function validateForm() {
    <hr>
    <h2 >Contact The Unmedicated</h2>
    <div id="contactForm">
-   <form name="contactForm" onsubmit="return validateForm();" method="post" action="https://formspree.io/jtvick05@gmail.com">  
+   <form name="contactForm" onsubmit="return validateEmail(email);" method="post" action="https://formspree.io/jtvick05@gmail.com">  
       Name: <input type="text" name="contactName" required>
       <br><br>
-      E-mail: <input type="text" name="email" required>
-  
+      E-mail: <input type="text" name="email" required>  
      <br><br>
      Comment: <textarea name="comment" rows="5" cols="40" required></textarea>
      <br><br>
