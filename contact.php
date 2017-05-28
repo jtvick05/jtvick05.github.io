@@ -1,24 +1,3 @@
-<?php 
-if(isset($_POST['submit'])){
-    $to = "jtvick05@gmail.com"; // this is your Email address
-    $from = $_POST['email']; // this is the sender's Email address
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $subject = "Form submission";
-    $subject2 = "Copy of your form submission";
-    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
-    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
-
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
-    header('Location: thank_you.html');
-    // You cannot use header and echo together. It's one or the other.
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,15 +21,18 @@ if(isset($_POST['submit'])){
 // define variables and set to empty values
 $nameErr = $emailErr = "";
 $name = $email = $comment = "";
+$throwError = 0;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
     $nameErr = "Name is required";
+    $throwError = 1;
   } else {
     $name = test_input($_POST["name"]);
     // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
       $nameErr = "Only letters and white space allowed"; 
+      $throwError = 1;
     }
   }
   
@@ -61,14 +43,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // check if e-mail address is well-formed
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $emailErr = "Invalid email format"; 
+      $throwError = 1;
     }
   }
     
-
   if (empty($_POST["comment"])) {
     $comment = "";
   } else {
     $comment = test_input($_POST["comment"]);
+  }
+  
+  if($throwError < 1) {
+    $to = "jtvick05@gmail.com"; // this is your Email address
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $name . " wrote the following:" . "\n\n" . $comment;
+    $message2 = "Here is a copy of your message " . $name . "\n\n" . $comment;
+    $headers = "From:" . $email;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($email,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
+    
   }
 }
 
