@@ -17,6 +17,23 @@
 </head>
 
 <body>
+
+<?php  
+  $url = "https://bitpay.com/api/rates/usd";
+
+  $json = file_get_contents($url);
+  $data = json_decode($json, TRUE);
+
+  $rate = $data[1]["rate"];    
+  $usd_price = 5;     
+  $bitcoin_price = round( $usd_price / $rate , 8 );
+  echo $usd_price;
+?>
+
+<ul>
+   <li>Price: <?=$usd_price ?> $ / <?=$bitcoin_price ?> BTC
+</ul>
+
 <div id="wrapper">
  <header><div id="logo"><h1><a href="index.html">The Unmedicated</a></h1></div>
  </header>
@@ -32,7 +49,11 @@
 
  <main>
  <hr>
- <p>Bitpay</p>
+ <p class="paymentDescription">Printed copies of The Unmedicated are $2 or xx bitcoins (bitcoin from $ conversion upon click). For fastest results use bitcoins.
+<br>
+For check orders make payment to Art-Lottery, PO box 421, Floyd Virginia 24091, USA.
+<br>
+Allow 3 weeks for delivery.</p>
 </main>
  
  <footer>
