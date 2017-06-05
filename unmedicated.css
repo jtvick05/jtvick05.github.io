@@ -47,6 +47,9 @@ nav ul li {display: table-cell;
 			text-align: center;
 			width: 30%;}
 
+.paymentHeading { font-weight: bold;
+                  font-size: 1.5em; }
+
 #logo { border:3px solid #000000;
 		background-color: #FFFFFF;
 		border-radius: 15px;

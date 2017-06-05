@@ -9,30 +9,26 @@
 
  <link rel="stylesheet" href="unmedicated.css">
  <!--[if lt IE 9]>
-<script src=”http://html5shim.googlecode.com/svn/trunk/html5.js”>
-</script>
-<![endif]-->
+    <script src=”http://html5shim.googlecode.com/svn/trunk/html5.js”>
+    </script>
+ <![endif]-->
 
- 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+ </script>
+
+ <script>
+   $(document).ready(function(){
+      $.getJSON('https://bitpay.com/api/rates/usd', function(exchangeData){
+         $btcExchange = 5/exchangeData.rate;
+         var $btcPrice = $btcExchange.toFixed(8);
+         $('#bitRate').text($btcPrice);
+      });
+   });
+ </script>
+
 </head>
 
 <body>
-
-<?php  
-  $url = "https://bitpay.com/api/rates/usd";
-
-  $json = file_get_contents($url);
-  $data = json_decode($json, TRUE);
-
-  $rate = $data[1]["rate"];    
-  $usd_price = 5;     
-  $bitcoin_price = round( $usd_price / $rate , 8 );
-  echo $usd_price;
-?>
-
-<ul>
-   <li>Price: <?=$usd_price ?> $ / <?=$bitcoin_price ?> BTC
-</ul>
 
 <div id="wrapper">
  <header><div id="logo"><h1><a href="index.html">The Unmedicated</a></h1></div>
@@ -49,9 +45,20 @@
 
  <main>
  <hr>
- <p class="paymentDescription">Printed copies of The Unmedicated are $2 or xx bitcoins (bitcoin from $ conversion upon click). For fastest results use bitcoins.
+ <p class="paymentDescription"><span class="paymentHeading">Printed copies of <em>The Unmedicated</em> are:</span>
+ <br>
+ <br> $5.00 or approximately <span id="bitRate"></span> Bitcoins 
+ <br>(Refreshing the page will also update the Bitcoin estimate) 
+ <br>
+ <br><span class="paymentHeading">For fastest results use bitcoins:</span>
 <br>
-For check orders make payment to Art-Lottery, PO box 421, Floyd Virginia 24091, USA.
+<br>
+<span class="paymentHeading">For check orders make payment to:</span>
+<br>
+<br>Art-Lottery, 
+<br>PO box 421, 
+<br>Floyd Virginia 24091, USA.
+<br>
 <br>
 Allow 3 weeks for delivery.</p>
 </main>
