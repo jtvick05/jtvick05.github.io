@@ -4,50 +4,49 @@ body {background-color: #FFFFFF;
 header { color: #FFFFFF;
          text-align: center; }
  
- header a {color: #000000;
- font-family: Impact, Charcoal, sans-serif;
- text-decoration: none;
- padding-left: 10px;
- padding-right: 10px;}
+header a {color: #000000;
+          font-family: Impact, Charcoal, sans-serif;
+          text-decoration: none;
+          padding-left: 10px;
+          padding-right: 10px; }
 
-h1 {font-size: 3.7em;
-	margin: 0;
- 	white-space: nowrap;}
+h1 { font-size: 3.7em;
+	 margin: 0;
+ 	 white-space: nowrap; }
 
 h2 { color: #000000;
      text-align: center;
-     font-size: 1.5em; 
-     }
-hr { margin: 0;}
+     font-size: 1.5em; }
+     
+hr { margin: 0; }
 
 p {padding-left: 10px;
 	padding-right: 10px;
 	color: #000000;
 	font-size: .75em;
-	text-align: center;}
+	text-align: center; }
 	
 .broughtToMsg { margin: 0; }  
    
 nav a { text-decoration: none;
- color: #000000;
- font-family: verdana, Geneva, sans-serif;
- font-size: 2em;
- padding: 2px 5px;
- }
+        color: #000000;
+        font-family: verdana, Geneva, sans-serif;
+        font-size: 2em;
+        padding: 2px 5px; }
 
 nav a:hover { background-color: #000000;              
               color: #FFFFFF;
-              border-radius: 15px;}
+              border-radius: 15px; }
 
 nav ul { list-style-type: none;
- margin: .5em;
- padding-left: 0;
- width: 95%;
- display: table;}
+         margin: .5em;
+         padding-left: 0;
+         width: 95%;
+         display: table; }
  
 nav ul li {display: table-cell;
-			text-align: center;
-			width: 25%;}
+		   text-align: center;
+		   width: 25%;}
 
 .paymentHeading { font-weight: bold;
                   font-size: 1.5em; }
@@ -55,26 +54,25 @@ nav ul li {display: table-cell;
 #logo { border:3px solid #000000;
 		background-color: #FFFFFF;
 		border-radius: 15px;
-		display: inline-block;}
+		display: inline-block; }
 			
-.active {
-         border: 1px solid black;
-         border-radius: 15px; }
+.active { border: 1px solid black;
+          border-radius: 15px; }
 
-footer {font-style: italic;
-        font-size: 80%;
-        clear: both;
-        color: #000000;
-        text-align: center;}
+footer { font-style: italic;
+         font-size: 80%;
+         clear: both;
+         color: #000000;
+         text-align: center; }
 
-mark {background-color: #FFFFFF;
+mark { background-color: #FFFFFF;
 	   color: #000000;
-	   text-align: center;}
+	   text-align: center; }
         
 #wrapper {width: 95%;
           margin-left: auto;
-          margin-right: auto;
-          }
+          margin-right: auto; }
+          
 #contactFormMsg { font-size: 85%; }
 
 .aboutDescription { font-size: 1em; }
@@ -84,11 +82,10 @@ img { border: 0; }
 .bitcoinLogo { width: 20%; }
 
 main { color: #FFFFFF;
-	  	border-radius: 25px;}
+	  	border-radius: 25px; }
 
 form { color: #000000;
-       text-align: center;
-        }
+       text-align: center; }
 
 #contactForm { padding-bottom: 1em; }
 
@@ -99,26 +96,22 @@ header, nav, main, footer { display: block; }
 #desktop { display: inline; }
 
 /* Slideshow container */
-.slideshow-container {
-  max-width: 95%;
-  position: relative;
-  margin: auto;
-}
+.slideshow-container { max-width: 95%;
+                       position: relative;
+                       margin: auto; }
 
-.slides {
-    height: 75%;
-    display: none;
-}
+.slides { height: 75%;
+          display: none; }
 
 table { width: 95%;
-  margin: auto;
-  color:black; 
-  border-collapse: collapse;}
+        margin: auto;
+        color:black; 
+        border-collapse: collapse; }
 
 .prevButton { text-align: left; }
 
 .nextButton {text-align: right; 
-   border-radius: 3px 0 0 3px; }
+             border-radius: 3px 0 0 3px; }
 
     
 /* Next & previous buttons */
@@ -129,9 +122,7 @@ table { width: 95%;
   color: black;
   font-weight: bold;
   font-size: 18px;
-  transition: 0.6s ease;
-
-}
+  transition: 0.6s ease; }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
@@ -148,16 +139,14 @@ table { width: 95%;
   top: 0;
   width: 95%;
   text-align: right;
-  margin: auto;
-}
+  margin: auto; }
 
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
-  animation-duration: 1.5s;
-}
+  animation-duration: 1.5s; }
 
 @-webkit-keyframes fade {
   from {opacity: .4} 
@@ -172,7 +161,8 @@ table { width: 95%;
 
 @media only screen and (max-width: 1024px) {
 	body {margin: 0;
-		  padding: 0;}  
+		  padding: 0;} 
+		   
 	#wrapper {width: 100%;
 			  min-width: 0;
 			  padding: 0;
@@ -183,43 +173,51 @@ table { width: 95%;
 	
 	header {height: 100%;}
 	
-	main {
-
-		  font-size: 90%;
-		  clear: both;}
+	main { font-size: 90%;
+		   clear: both;}
 	}
+
 
 @media only all and (max-width: 768px) {
 	body{ background-image: none;}
+	
 	header {padding: 0em;}
+	
 	h1 { font-size: 2.4em; }
 
 	nav a { font-size: 1.25em;
 	        display: block; }
+	        
 	nav ul li {display:block;
 				margin: .1em;
 				width: 70%;
 				margin-left: 15%;
-				margin-right: 15%;}
+				margin-right: 15%; }
+	
 	.active {color: #FFFFFF;
-         border: 1px solid black;
-         border-radius: 15px;
-         background-color: #000000;}
+             border: 1px solid black;
+             border-radius: 15px;
+             background-color: #000000; }
+             
 	#floatleft {float: none;
 				padding-right: 0;
-				padding-bottom: 0;}
+				padding-bottom: 0; }
 	
-	h3 {padding-top: 0;
-		margin: 0;}
-	dd {line-height: 100%;}
-	footer {padding: .5em;
-			margin: 0;}
+	h3 { padding-top: 0;
+		 margin: 0; }
+		 
+	dd { line-height: 100%; }
+	
+	footer { padding: .5em;
+			 margin: 0; }
+	
 	#mobile { display: inline; }
+	
 	#desktop { display: none; }
 	.prev, .next {
 	    color: white;
-       background-color: rgba(0,0,0,0.8);
-}
+        background-color: rgba(0,0,0,0.8); }
+        
    .bitcoinLogo { width: 40%; }
 	
 	}
