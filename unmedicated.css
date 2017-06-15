@@ -25,7 +25,9 @@ p {padding-left: 10px;
 	color: #000000;
 	font-size: .75em;
 	text-align: center;}
-.broughtToMsg { margin: 0; }     
+	
+.broughtToMsg { margin: 0; }  
+   
 nav a { text-decoration: none;
  color: #000000;
  font-family: verdana, Geneva, sans-serif;
@@ -78,7 +80,7 @@ mark {background-color: #FFFFFF;
           padding-left: 3%;}
 #contactFormMsg { font-size: 85%; }
 
-#aboutDescription { font-size: 1.5em; }
+#aboutDescription { font-size: 2em; }
 
 img { border: 0; }
 
