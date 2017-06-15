@@ -31,7 +31,7 @@ p {padding-left: 10px;
 nav a { text-decoration: none;
         color: #000000;
         font-family: verdana, Geneva, sans-serif;
-        font-size: 2em;
+        font-size: 1.75em;
         padding: 2px 5px; }
 
 nav a:hover { background-color: #000000;              
@@ -162,6 +162,9 @@ table { width: 95%;
 @media only screen and (max-width: 1024px) {
 	body {margin: 0;
 		  padding: 0;} 
+    
+    nav a { font-size: 1.5em; 
+            display: block; }
 		   
 	#wrapper {width: 100%;
 			  min-width: 0;
