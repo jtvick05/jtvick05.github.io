@@ -74,13 +74,10 @@ mark {background-color: #FFFFFF;
 #wrapper {width: 95%;
           margin-left: auto;
           margin-right: auto;
-          padding-top: 1%;
-          padding-right: 3%;
-          padding-bottom: 3%;
-          padding-left: 3%;}
+          }
 #contactFormMsg { font-size: 85%; }
 
-#aboutDescription { font-size: 2em; }
+.aboutDescription { font-size: 2em; }
 
 img { border: 0; }
 
