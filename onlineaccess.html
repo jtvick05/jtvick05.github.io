@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>About: The Unmedicated</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="The Unmedicated is a graphic novel to articulate mental health issues and recovery.">
+
+ <link rel="stylesheet" href="unmedicated.css">
+ <!--[if lt IE 9]>
+    <script src=”http://html5shim.googlecode.com/svn/trunk/html5.js”>
+    </script>
+ <![endif]-->
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+ </script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+ <header><div id="logo"><h1><a href="index.html">The Unmedicated</a></h1></div>
+ </header>
+ 
+ <nav>
+ 	<ul> 		
+ 	    <li><a href="index.html">Home</a></li>
+ 	    <li><a href="about.html">About</a></li>
+ 		<li><a href="contact.html">Contact</a></li>
+ 		<li><a href="onlineaccess.html" class="active">View Online</a></li>
+ 		<li><a href="requestcopies.html">Request Copies</a></li>
+ 	</ul>
+</nav>
+
+
+ <main>
+ <hr>
+ <p><span class="paymentHeading">If you have a code, please enter it here to view the full copy online:</span>
+ </p>
+ 
+ <form method="POST" action="secure.php">
+            Access Code: <input type="password" name="pass"></input><br/>
+            <input type="submit" name="submit" value="Submit"></input>
+ </form>
+ <p><span class="paymentHeading">If you need the access code, please purchase access for .0005 bitcoin</span>
+    <br> (You will receive the access code after purchase)
+    <br>
+    <br>Use this link to purchase online access:
+
+</main>
+ 
+ <footer>
+   <a href="requestcopies.html"><img class="bitcoinLogo" src="images/bitcoin.png"></a>
+   <br>
+   <br>
+   <mark>Copyright &copy; Art-Lottery 2017</mark> 
+ </footer>
+ </div>
+</body>
+</html>
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Contact: The Unmedicated</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Contact The Unmedicated with any questions or comments">
+
+ <link rel="stylesheet" href="unmedicated.css">
+ <!--[if lt IE 9]>
+   <script src=”http://html5shim.googlecode.com/svn/trunk/html5.js”>
+   </script>
+ <![endif]-->
+
+<script>
+   function validateEmail(email){
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+        if (reg.test(email.value) == false) 
+        {
+            alert('Invalid Email Address');
+            return false;
+        }
+
+        return true;
+   }
+</script>
+
+</head>
+
+<body>
+
+   <div id="wrapper">
+   <header><div id="logo"><h1><a href="index.html">The Unmedicated</a></h1></div>
+   </header>
+ 
+   <nav>
+      <ul> 		
+ 	    <li><a href="index.html">Home</a></li>
+ 	    <li><a href="about.html">About</a></li>
+ 		<li><a href="contact.html" class="active">Contact</a></li>
+ 		<li><a href="onlineaccess.html">View Online</a></li>
+ 		<li><a href="requestcopies.html">Request Copies</a></li> 		
+ 	  </ul>
+   </nav>
+
+   <main>
+   <hr>
+   <h2 >Contact The Unmedicated</h2>
+   <div id="contactForm">
+   <form name="contactForm" onsubmit="return validateEmail(email);" method="post" action="https://formspree.io/shaughman@gmail.com">  
+      Name: <input type="text" name="contactName" required>
+      <br><br>
+      E-mail: <input type="text" name="email" required>  
+     <br><br>
+     Comment: <textarea name="comment" rows="5" cols="40" required></textarea>
+     <br><br>
+     <input type="submit" name="submit" value="Submit">  
+     <br>
+     <p id="contactFormMsg">(After Submit, you will be redirected to Formspree to complete your submission)</p>
+   </form>
+   </div>			
+   </main>
+ 
+ <footer>
+ <a href="requestcopies.html"><img class="bitcoinLogo" src="images/bitcoin.png"></a>
+ <br>
+ <mark>Copyright &copy; Art-Lottery 2017</mark>
+ 
+ 
+ </footer>
+ </div>
+</body>
+</html>
+
