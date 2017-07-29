@@ -32,7 +32,8 @@ nav a { text-decoration: none;
         color: #000000;
         font-family: verdana, Geneva, sans-serif;
         font-size: 1.75em;
-        padding: 2px 5px; }
+        padding: 2px 5px;
+        display: block; }
 
 nav a:hover { background-color: #000000;              
               color: #FFFFFF;
@@ -41,12 +42,12 @@ nav a:hover { background-color: #000000;
 nav ul { list-style-type: none;
          margin: .5em;
          padding-left: 0;
-         width: 95%;
+         width: 100%;
          display: table; }
  
 nav ul li {display: table-cell;
 		   text-align: center;
-		   width: 25%;}
+		   width: 20%;}
 
 .paymentHeading { font-weight: bold;
                   font-size: 1.5em; }
