@@ -2,7 +2,7 @@
 
 $pass = $_POST['pass'];
 
-if($pass == "admin")
+if($pass == "s3cure321!")
 {
         include("fullcopysecure.html");
 }
